@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        cursor: none;
+    }
+
+    .cursor {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        background-color: #323232;
+        z-index: 1;
+    }
+
+    .child {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: orange;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .child-1{
+        transition: all 0.1s;
+    }
+
+    .child-2{
+        transition: all 0.2s;
+    }
+
+    .child-3{
+        transition: all 0.3s;
+    }
+
+</style>
+
+<body>
+
+    <div class="cursor"></div>
+
+    <div class="child child-1"></div>
+
+    <div class="child child-2 "></div>
+
+    <div class="child child-3"></div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <script>
+
+        $(window).mousemove(function (e) {
+            const horizontal_position = e.offsetX
+            const vertical_position = e.offsetY
+            $('div').css({
+                top: vertical_position,
+                left: horizontal_position,
+                visibility: "visible",
+                opacity: "1",
+            });
+            console.log(horizontal_position,vertical_position)
+        });
+
+    </script>
+</body>
+
+</html>
