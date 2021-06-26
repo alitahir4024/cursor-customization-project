@@ -27,4 +27,4 @@ Please link or attach jQuery with your code to use this project.
 
 ## Project Preview:
 
-(https://ali-tahir4024.github.io/cursor-customization-project/).
+[Cursor Customiztion Project](https://alitahir4024.github.io/cursor-customization-project/)
